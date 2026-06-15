@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Future Hub - Contact Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #161b22 !important;
+            border-bottom: 1px solid #30363d;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #58a6ff !important;
+            font-weight: bold;
+        }
+
+        .btn-outline-tech {
+            border: 1px solid #30363d;
+            color: #8b949e;
+            margin-left: 5px;
+        }
+
+        .btn-outline-tech:hover,
+        .btn-outline-tech.active {
+            background-color: #21262d;
+            color: #58a6ff;
+            border-color: #58a6ff;
+        }
+
+        .form-wrapper {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-container {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .form-group label {
+            color: #8b949e;
+            font-weight: 600;
+        }
+
+        .form-control {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+
+        .form-control:focus {
+            background-color: #0d1117;
+            color: #fff;
+            border-color: #58a6ff;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #238636;
+            /* Clean tech green submit button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #2ea043;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AI Future Hub</a>
+            <div>
+                <a class="btn btn-outline-tech btn-sm" href="index.html">Home</a>
+                <a class="btn btn-outline-tech btn-sm" href="about.html">About AI</a>
+                <a class="btn btn-outline-tech btn-sm active" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-wrapper">
+        <div class="contact-container">
+            <h2 class="text-center mb-4" style="color: #f0f6fc;">Contact Us</h2>
+
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="userName" class="form-control" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="userEmail" class="form-control" required placeholder="name@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control" rows="4" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit mt-3">Send Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents page reload
+
+            // Getting the input values
+            var name = document.getElementById('userName').value;
+            var email = document.getElementById('userEmail').value;
+
+            // Pop-up Alert using custom string concatenation
+            alert("Thank you, " + name + "! Your feedback has been received via " + email + ".");
+        });
+    </script>
+
+</body>
+
+</html>
